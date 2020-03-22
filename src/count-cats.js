@@ -1,4 +1,10 @@
-module.exports = function countCats(/* matrix */) {
-  throw 'Not implemented';
-  // remove line with error and write your code here
+module.exports = function countCats(backyard) {
+  let backyardLine = [].concat.apply([], backyard);
+  let counter = 0;
+  backyardLine.forEach(elem => {
+    if(elem == "^^") {
+      counter += 1;
+    }
+  });
+  return counter;
 };
